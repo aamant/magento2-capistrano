@@ -1,0 +1,40 @@
+{
+    "name": "aamant/magento2-capistrano",
+    "description": "Deploy with capistano",
+    "type": "magento2-component",
+    "minimum-stability": "stable",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Amant Arnaud",
+            "email": "contact@arnaudamant.fr"
+        }
+    ],
+    "require": {
+        "magento/magento-composer-installer": "*"
+    },
+    "extra": {
+        "map": [
+            [
+               "capistrano",
+               "capistrano"
+            ],
+            [
+                "Capfile",
+                "Capfile"
+            ],
+            [
+                "CAPISTRANO.md",
+                "CAPISTRANO.md"
+            ],
+            [
+                "Gemfile",
+                "Gemfile"
+            ],
+            [
+                "Gemfile.lock",
+                "Gemfile.lock"
+            ]
+        ]
+    }
+}
