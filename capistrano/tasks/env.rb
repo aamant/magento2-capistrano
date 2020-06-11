@@ -2,7 +2,7 @@ namespace :env do
   desc 'Install env file'
   task :put do
     on roles(:web) do
-      execute "mkdir -p #{shared_path}/app/config/etc"
+      execute "mkdir -p #{shared_path}/app/etc"
       upload! "#{fetch(:upload_files_path)}/env.#{fetch(:stage)}.php", "#{shared_path}/app/etc/env.php"
     end
   end

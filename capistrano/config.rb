@@ -42,7 +42,7 @@ set :php_fpm_restart_command, 'sudo service restart php7.3'
 # set :ssh_options, verify_host_key: :secure
 
 set :magento_deploy_languages, ["fr_FR", "en_US"]
-set :magento_deploy_themes, ["Magento/backend", "Magento/lumo"]
+set :magento_deploy_themes, ["Magento/backend", "Magento/luma"]
 
 #before 'magento:maintenance:enable', 'override:maintenance'
 after 'deploy:check:directories', 'env:put'
