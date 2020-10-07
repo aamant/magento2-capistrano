@@ -36,7 +36,7 @@ set :repo_url, ''
 # set :keep_releases, 5
 
 set :format_options, log_file: "var/log/capistrano.log"
-set :php_fpm_restart_command, 'sudo service restart php7.3'
+set :php_fpm_restart_command, 'sudo /usr/sbin/service php7.4-fpm reload'
 
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
@@ -46,5 +46,6 @@ set :magento_deploy_themes, ["Magento/backend", "Magento/luma"]
 
 #before 'magento:maintenance:enable', 'override:maintenance'
 after 'deploy:check:directories', 'env:put'
-#after 'magento:maintenance:disable', 'server:fpm:restart'
-#after 'magento:maintenance:disable', 'server:supervisor:restart'
+after 'deploy:published', 'server:fpm:restart'
+after 'deploy:published', 'magento:queue:consumers:kill'
+#after 'deploy:published', 'server:supervisor:restart'
