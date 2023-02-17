@@ -34,6 +34,10 @@
             [
                 "Gemfile.lock",
                 "Gemfile.lock"
+            ],
+            [
+                ".gitignore",
+                ".gitignore"
             ]
         ]
     }

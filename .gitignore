@@ -1,0 +1,5 @@
+/vendor/
+/capistrano/files/*
+!/capistrano/files/.gitkeep
+/var/
+/CAPISTRANO.md
